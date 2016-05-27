@@ -82,4 +82,10 @@ config.resolve.alias = {
   'utils': join(src, 'utils')
 }
 
+config.externals = Object.assign({}, config.externals, {
+  'react/lib/ExecutionEnvironment': true,
+  'react/addons': true,
+  'react/lib/ReactContext': 'window'
+})
+
 module.exports = config

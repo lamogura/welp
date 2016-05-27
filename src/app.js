@@ -3,18 +3,23 @@ import ReactDOM from 'react-dom'
 
 import 'font-awesome/css/font-awesome.css'
 import './app.css'
-import styles from './styles.module.css'
 
-const App = React.createClass({
+import { browserHistory, Router, Route } from 'react-router'
+import App from 'containers/App/App'
+
+class Home extends React.Component {
   render () {
-    return (
-      <div className={styles.wrapper}>
-        <i className='fa fa-star' />
-        <h1>Environment: {__NODE_ENV__}</h1>
-      </div>
-    )
+    return <div>Hello World</div>
   }
-})
+}
+
+const routes = (
+  <Router>
+    <Route path='/' component={Home} />
+  </Router>
+)
 
 const mountNode = document.querySelector('#root')
-ReactDOM.render(<App />, mountNode)
+ReactDOM.render(
+  <App history={browserHistory} routes={routes} />
+, mountNode)
