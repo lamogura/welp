@@ -54,7 +54,7 @@ export class Container extends Component {
         onReady={this._onReady}
       >
         <Header />
-        <Sidebar 
+        <Sidebar
           title={'Restaurants'}
           places={this.state.places}
         />

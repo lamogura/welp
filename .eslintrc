@@ -3,6 +3,7 @@
   "extends": ["standard", "standard-react"],
   "env": {
     "browser": true,
+    "mocha": true,
     "es6": true
   },
   "parser": "babel-eslint",
